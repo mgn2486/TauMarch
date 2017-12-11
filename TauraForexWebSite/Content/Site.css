@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,9 +17,30 @@
     white-space: normal;
 }
 
+p{
+    text-align:justify;
+    line-height:200%;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#row-section {
+    margin: 70px;
+}
+
+#greyArea {
+    padding: 50px;
+    background-image: url("images/small_images/ask.jpg");
+    background-size: 100%;
+    filter: grayscale(90%);
+    color: white;
+}
+
+.button-row {
+    margin: 20px;
 }
