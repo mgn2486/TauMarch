@@ -6,6 +6,7 @@
 
     <title>@ViewBag.Title - Train to Trade</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/site.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -33,10 +34,20 @@
     </div>
     <div class="container body-content">
         <div class="row">
-            <div class="col-md-12">
-                <img src="~/Content/images/banner/Trade_5.jpg" class="img-responsive center-block" style="background-size: cover; width:100%; height:100%;" />
+            <div class="col-md-12 banner-holder">
+                <img src="~/Content/images/banner/Trade_5.jpg" class="img-responsive center-block product-image" style="background-size: cover; width:100%; height:100%;" />
+                <div id="motivationalText"><h4 class="plus-image " style="background-color: aqua; color: black; font-family: -apple-system; padding: 5px;"></h4></div>
             </div>
         </div>
+        <div class="row text-center">
+            <div class="col-xs-6 text-center" style="background-color:white; margin-top:10px;">
+                <div class='banner-holder'>
+                    <img src="~/Content/images/small_images/Trade_1.jpg" width="250" height="250" class='product-image'>
+                    <img src="~/Content/images/small_images/Trade_2.jpg" width="50px" height="50px" class='plus-image'>
+                </div>
+            </div>
+        </div>
+
         @RenderBody()
         <hr />
         <div class="row">

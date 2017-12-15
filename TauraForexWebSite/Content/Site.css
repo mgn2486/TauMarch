@@ -46,3 +46,24 @@ textarea {
 .button-row {
     margin: 20px;
 }
+
+/*Floating images*/
+.banner-holder {
+    position: relative;
+    display: block;
+}
+
+.plus-image {
+    left: 7%;
+    top: 70%;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+#motivationalText {
+    background: green;
+    overflow: hidden;
+    color: white;
+    font-family: Open sans;
+}
