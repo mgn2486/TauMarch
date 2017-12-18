@@ -6,6 +6,7 @@
 
     <title>@ViewBag.Title - Train to Trade</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="~/Scripts/site.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -35,8 +36,11 @@
     <div class="container body-content">
         <div class="row">
             <div class="col-md-12 banner-holder">
-                <img src="~/Content/images/banner/Trade_5.jpg" class="img-responsive center-block product-image" style="background-size: cover; width:100%; height:100%;" />
-                <div id="motivationalText"><h4 class="plus-image " style="background-color: aqua; color: black; font-family: -apple-system; padding: 5px;">Train To Trade</h4></div>
+                <div id="tradeShow">
+                    <img src="~/Content/images/banner/Trade_5.jpg" class="img-responsive center-block product-image" style="background-size: cover; width: 100%; height: 100%;" />
+                </div>
+                <div id="motivationQoute" class="plus-image " style="background-color: aqua; color: black; font-family: -apple-system; padding: 5px;">Train To Trade
+                </div>
             </div>
         </div>
         
@@ -62,5 +66,17 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+<script>
+    $(function () {
+        count = 0;
+        wordsArray = ["Beta", "Gamma", "Delta", "Alpha"];
+        setInterval(function () {
+            count++;
+            $("#motivationQoute").fadeOut(400, function () {
+                $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+            });
+        }, 9000);
+    });
+</script>
 </body>
 </html>

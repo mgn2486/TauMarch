@@ -1,12 +1,10 @@
-﻿var text = ["Welcome", "To", "Train to Trade"];
-var counter = 0;
-var elem = document.getElementById("motivationalText");
-setInterval(change, 1000);
-
-function change() {
-    elem.innerHTML = text[counter];
-    counter++;
-    if (counter >= text.length) {
-        counter = 0;
-    }
-}
+﻿$(function () {
+    count = 0;
+    wordsArray = ["Beta", "Gamma", "Delta", "Alpha"];
+    setInterval(function () {
+        count++;
+        $("#motivationQoute").fadeOut(400, function () {
+            $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+        });
+    }, 2000);
+});
