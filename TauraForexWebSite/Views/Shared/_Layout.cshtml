@@ -10,6 +10,12 @@
     <script src="~/Scripts/site.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
+    <style>
+        #secretDiv {
+            display: none;
+        }
+    </style>
 
 </head>
 <body>
@@ -25,9 +31,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink(" Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Courses", "Courses", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -35,12 +43,13 @@
     </div>
     <div class="container body-content">
         <div class="row">
-            <div class="col-md-12 banner-holder">
+            <div class="col-md-12 col-xs-12 banner-holder">
                 <div id="tradeShow">
                     <img src="~/Content/images/banner/Trade_5.jpg" class="img-responsive center-block product-image" style="background-size: cover; width: 100%; height: 100%;" />
+                    <div id="motivationQoute" class="plus-image text-success col-xs-6" style="color: black; font-family: -apple-system; padding: 5px;">Train To Trade
+                    </div>
                 </div>
-                <div id="motivationQoute" class="plus-image " style="background-color: aqua; color: black; font-family: -apple-system; padding: 5px;">Train To Trade
-                </div>
+                
             </div>
         </div>
         
@@ -69,14 +78,24 @@
 <script>
     $(function () {
         count = 0;
-        wordsArray = ["Beta", "Gamma", "Delta", "Alpha"];
+        wordsArray = ["Action speaks louder  than words.......Book your slot now and start learning.", "Zeal without knowledge  is a runaway horse....let us educate you about forex trading", "An empty bag will not stand upright.....let us feed you with innovative financial solutions.", "knowledge is power...Get an edge.", "A penny saved is a penny gained....take control of your trading!", " Nothing succeeds  like success","Make hey while the sun shines...Join and get financial freedom"];
         setInterval(function () {
             count++;
-            $("#motivationQoute").fadeOut(400, function () {
-                $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+            $("#motivationQoute").fadeOut(800, function () {
+                $(this).text(wordsArray[count % wordsArray.length]).fadeIn(900);
             });
-        }, 9000);
+        }, 50000);
     });
+
+    function myHidding() {
+        var x = document.getElementById("secretDiv");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 </script>
+   
 </body>
 </html>

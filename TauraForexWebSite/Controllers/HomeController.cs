@@ -25,6 +25,11 @@ namespace TauraForexWebSite.Controllers
             return View();            
         }
 
+        public ActionResult Courses()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Contact(string message)
         {
